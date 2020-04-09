@@ -18,29 +18,29 @@ In the following code, i am starting my apache during the startup.
 Create a file /Library/LaunchDaemons/apachefriends.xampp.apache.start.plist
 
 ```bash
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
-&lt;plist version="1.0"&gt;
-&lt;dict&gt;
-	&lt;key&gt;EnableTransactions&lt;/key&gt;
-	&lt;true/&gt;
-	&lt;key&gt;Label&lt;/key&gt;
-	&lt;string&gt;apachefriends.xampp.apache.start&lt;/string&gt;
-	&lt;key&gt;ProgramArguments&lt;/key&gt;
-	&lt;array&gt;
-		&lt;string&gt;/Applications/XAMPP/xamppfiles/xampp&lt;/string&gt;
-		&lt;string&gt;startapache&lt;/string&gt;
-	&lt;/array&gt;
-	&lt;key&gt;RunAtLoad&lt;/key&gt;
-	&lt;true/&gt;
-	&lt;key&gt;WorkingDirectory&lt;/key&gt;
-	&lt;string&gt;/Applications/XAMPP/xamppfiles&lt;/string&gt;
-	&lt;key&gt;KeepAlive&lt;/key&gt;
-	&lt;false/&gt;
-	&lt;key&gt;AbandonProcessGroup&lt;/key&gt;
-	&lt;true/&gt;
-&lt;/dict&gt;
-&lt;/plist&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>Label</key>
+	<string>apachefriends.xampp.apache.start</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Applications/XAMPP/xamppfiles/xampp</string>
+		<string>startapache</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>WorkingDirectory</key>
+	<string>/Applications/XAMPP/xamppfiles</string>
+	<key>KeepAlive</key>
+	<false/>
+	<key>AbandonProcessGroup</key>
+	<true/>
+</dict>
+</plist>
 
 ```
 

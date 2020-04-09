@@ -34,7 +34,7 @@ In addition to tmux installing tmuxinator, will drastically improves the way one
 After defining this daily.yml template, just run _mux daily_ to open tmux session with the windows and panes created as defined in the template.
 
 ```bash
-##&gt; vim ~/.tmuxinator/daily.yml
+##> vim ~/.tmuxinator/daily.yml
 
 name: vishdaily-workspace
 root: ~/

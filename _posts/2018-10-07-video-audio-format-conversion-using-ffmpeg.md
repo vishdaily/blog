@@ -15,10 +15,10 @@ tags:
 # get file info
 ffmpeg -i input.mp4
 
-# mkv -&gt; mp3
+# mkv -> mp3
  ffmpeg -i "movie.mkv" -vn -c:a libmp3lame -y "sound.mp3"
 
- # cut video from hh:mm:ss.0 -&gt; +t 2064 seconds 
+ # cut video from hh:mm:ss.0 -> +t 2064 seconds 
 # from 22 minutes to 54.40 minutes which is 22 minutes + 2064 seconds (34.40 minutes)
  ffmpeg -ss 00:22:00.0 -i input.mp4 -c copy -t 2064  output.mp4
 

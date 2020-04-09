@@ -53,7 +53,7 @@ Some Short Cuts
       Alt + Enter For Full Screen
     </li>
     <li>
-      Edit dosbox-{version}.conf<br /> For Linux the configfile is created on the first run in ~/.dosbox/ The name is dosbox-&lt;i>{version}&lt;/i>.conf where version is currently 0.74
+      Edit dosbox-{version}.conf<br /> For Linux the configfile is created on the first run in ~/.dosbox/ The name is dosbox-<i>{version}</i>.conf where version is currently 0.74
     </li>
   </ol>
 </li>
@@ -63,7 +63,7 @@ fullscreen=true
 fulldouble=true
 fullresolution=1366x768
 windowresolution=1366x768
-&lt;strong>output=opengl&lt;/strong>
+<strong>output=opengl</strong>
 autolock=true
 ```
 

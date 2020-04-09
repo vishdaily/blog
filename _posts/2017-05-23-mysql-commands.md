@@ -18,7 +18,7 @@ tags:
 Here are some frequently used mysql commands for quick reference.
 
 ```bash
-mysql -u root -p &lt;enter&gt;
+mysql -u root -p <enter>
 mysql -u root -p'yourpassword'
 ```
 
@@ -31,11 +31,11 @@ GRANT ALL PRIVILEGES ON inventory.* TO 'community'@'localhost' IDENTIFIED BY 'pa
 
 ```bash
 # import database 
-mysql -u username -p password [databasename] &lt; [sql file name]
+mysql -u username -p password [databasename] < [sql file name]
 # export database 
-mysqldump -u username -p'password' [databasename] &gt; [sql file name] 
+mysqldump -u username -p'password' [databasename] > [sql file name] 
 # copy or clone a database
-mysqldump -u &lt;user name&gt; -p'yourpassword' &lt;original_db&gt; | mysql -u &lt;user name&gt; -p'yourpassword' &lt;new db&gt;
+mysqldump -u <user name> -p'yourpassword' <original_db> | mysql -u <user name> -p'yourpassword' <new db>
 
 ```
 

@@ -25,7 +25,7 @@ kdesu dolphin
 ## Change Password Of dmg files
 
 ```bash
-hdiutil chpass &lt;dmg_file_name&gt;
+hdiutil chpass <dmg_file_name>
 ```
 
 ## Secure Delete Deleted Files
@@ -49,7 +49,7 @@ time dd if=/dev/zero bs=1024k of=tstfile count=1024
 ## Secure Delete Files / Folders
 
 ```bash
-srm &lt;file_name&gt; 
-srm -r &lt;folder_name&gt;
+srm <file_name> 
+srm -r <folder_name>
 
 ```

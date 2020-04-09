@@ -33,11 +33,11 @@ https://brew.sh
 ## Some frequently used commands
 
 ```bash
-brew search &lt;package&gt;
-brew info &lt;imagemagick&gt;
-brew install &lt;package&gt;
-brew --dry-run uninstall &lt;package&gt;
-brew reinstall &lt;imagemagick&gt;
+brew search <package>
+brew info <imagemagick>
+brew install <package>
+brew --dry-run uninstall <package>
+brew reinstall <imagemagick>
 brew list # displays list of installed packages
 brew leaves # displays formulas that are not dependent on other installed formulas
 ```
@@ -69,9 +69,9 @@ https://www.macports.org
 ## Some frequently used commands
 
 ```bash
-sudo port search &lt;portname&gt;
-sudo port info &lt;portname&gt;
-sudo port install &lt;portname&gt;
+sudo port search <portname>
+sudo port info <portname>
+sudo port install <portname>
 
 # Lists the ports installed with out dependencies. (which are not depended on other installed ports)
 sudo port echo leaves
@@ -81,8 +81,8 @@ sudo port installed
 port -d echo installed 
 du -sh /opt/local/var/macports/software/* 
 
-sudo port uninstall &lt;portname&gt; 
-sudo port uninstall --follow-dependencies &lt;portname&gt; 
+sudo port uninstall <portname> 
+sudo port uninstall --follow-dependencies <portname> 
 
 # Before pruning your leaves, you may also want to uninstall old versions of ports that are no longer “active”
 sudo port uninstall inactive

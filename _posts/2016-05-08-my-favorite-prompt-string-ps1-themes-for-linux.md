@@ -51,15 +51,3 @@ Bash uses numeric codes to set attributes of the text to be displayed.
 
 <u>Background color codes:</u>  
 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
-
-<code class="inline">\e[&lt;i>attribute&lt;br />
-code&lt;/i>;&lt;i>text color code&lt;/i>m
-
-<code class="inline">\e[&lt;i>attribute code&lt;/i>;&lt;i>text color code&lt;/i>;&lt;i>background&lt;br />
-color code&lt;/i>m
-
-`green='\e[0;32m'        # '\e[1;32m' is too bright for white bg.<br />
-endColor='\e[0m'`
-
-\# Display welcome message  
-echo -e &#8220;${green}Welcome \e[5;32;47m $USER \n${endColor}&#8221;

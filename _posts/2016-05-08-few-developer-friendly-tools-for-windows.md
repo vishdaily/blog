@@ -71,7 +71,7 @@ I want to share you all about some of my favorite tools / software&#8217;s I use
 **ConEmu** for windows. This has been my favorite replacement for windows command prompt from almost 3 years and made my developer life easier. With this i could configure my startup directory paths and initial batch files to be executed every time i open ConEmu. My requirement was that, the kind of projects I was working required at least 5 or 6 command to be opened and then some batch files to be executed which sets few environment variables. One window takes care of application server, Another displays &#8220;tail -f error.log&#8221; application server log (I have also installed **cygwin** to be able to execute linux commands) and so on.. It also allows to define tasks for different projects. Each task consists of one or more batch commands. for example
 
 ```bash
-&gt; "%windir%\system32\cmd.exe" /k "cd C:\dev\programs\eserver72136\bin"
+> "%windir%\system32\cmd.exe" /k "cd C:\dev\programs\eserver72136\bin"
 
 * "%windir%\system32\cmd.exe" /k "C:\dev\programs\eserver72136\bin\environment.bat && cd C:\dev\programs\eserver72136\bin"
 

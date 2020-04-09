@@ -63,7 +63,7 @@ Statements contained within the [], {}, or () brackets do not need to use the li
         if ok in ('n', 'no', 'nop', 'nope'):             
             return False         
         retries = retries - 1         
-        if retries &lt; 0:             
+        if retries < 0:             
             raise ValueError('invalid user response')         
         print(reminder)
 
@@ -100,9 +100,9 @@ Statements contained within the [], {}, or () brackets do not need to use the li
         str.lower()
         str.rsplit("_",3)
 
-    "1_2_3_4_5".rsplit("_",1) ==&gt; ['1_2_3_4', '5']
-    "1_2_3_4_5".rsplit("_",2) ==&gt; ['1_2_3, '4', '5']
-    "1_2_3_4_5".rsplit("_",3) ==&gt; ['1_2, '3', '4', '5']
+    "1_2_3_4_5".rsplit("_",1) ==> ['1_2_3_4', '5']
+    "1_2_3_4_5".rsplit("_",2) ==> ['1_2_3, '4', '5']
+    "1_2_3_4_5".rsplit("_",3) ==> ['1_2, '3', '4', '5']
 
 
 ```
