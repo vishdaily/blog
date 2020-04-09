@@ -13,34 +13,8 @@ categories:
 tags:
   - shortcut keys
 ---
-<table class="alignleft" style="border-color: #1a9641;" border="1" cellpadding="6">
-  <tr>
-    <td>
-      Entire screen
-    </td>
-    
-    <td>
-      Shift-Command (⌘)-3
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Selected screen
-    </td>
-    
-    <td>
-      Shift-Command (⌘)-4
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Of a window
-    </td>
-    
-    <td>
-      Shift-Command (⌘)-4 then Press Spacebar
-    </td>
-  </tr>
-</table>
+
+|Action|Shortcut|
+|Capture Entire screen|Shift-Command (⌘)-3|
+|Capture Selected screen|Shift-Command (⌘)-4|
+|Capture a window|Shift-Command (⌘)-4 then Press Spacebar|

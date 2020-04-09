@@ -116,78 +116,15 @@ For more commands see here. https://guide.macports.org/chunked/using.html
 
 Installed via Macports
 
-<table style="width: 608.703125px; border-color: #276e0d;" border="1">
-  <tr>
-    <td style="width: 58px;">
-      encfs
-    </td>
-    
-    <td style="width: 535.703125px;">
-      EncFS is an encrypted pass-through filesystem using the FUSE kernel
-    </td>
-  </tr>
-  
-  <tr>
-    <td style="width: 58px;">
-      sshfs
-    </td>
-    
-    <td style="width: 535.703125px;">
-      mounts filesystem on other remote system using ssh
-    </td>
-  </tr>
-  
-  <tr>
-    <td style="width: 58px;">
-      sshpass
-    </td>
-    
-    <td style="width: 535.703125px;">
-      pass password for ssh protocol
-    </td>
-  </tr>
-  
-  <tr>
-    <td style="width: 58px;">
-      pv
-    </td>
-    
-    <td style="width: 535.703125px;">
-      pipe viewer
-    </td>
-  </tr>
-</table>
-
-&nbsp;
+|Tool|Description|
+|encfs|EncFS is an encrypted pass-through filesystem using the FUSE kernel|
+|sshfs|mounts filesystem on other remote system using ssh|
+|sshpass|pass password for ssh protocol|
+|pv|pipe viewer|
 
 Installed via Homebrew
 
-<table style="border-color: #276e0d;" border="1">
-  <tr>
-    <td>
-      wget
-    </td>
-    
-    <td>
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      watch
-    </td>
-    
-    <td>
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      imagemagick
-    </td>
-    
-    <td>
-       tools to manipulate images
-    </td>
-  </tr>
-</table>
+|Tool|Description|
+|wget|Description|
+|watch|Description|
+|imagemagick|tools to manipulate images|
