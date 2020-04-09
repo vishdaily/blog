@@ -1,1 +1,10 @@
-theme: jekyll-theme-hacker
+# basic options
+title: Your awesome title
+author: vishdaily
+email: your-email@domain.com
+description: A wonderful site
+github_username:  vishdaily
+
+# Build settings
+markdown: kramdown
+theme: minima
