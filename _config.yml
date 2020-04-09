@@ -9,7 +9,7 @@ description: > # this means to ignore newlines until "show_excerpts:"
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-midnight
+theme: jekyll-theme-architect
 
 plugins:
  - jekyll-feed
