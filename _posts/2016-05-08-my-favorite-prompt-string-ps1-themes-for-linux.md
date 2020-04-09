@@ -16,12 +16,14 @@ tags:
 ---
 Following are my favorite PS1 strings which i use frequently in my bashrc file.
 
-<pre><code class="language-bash">
+```bash
+
 PS1="\n\[\033[38;5;10m\]$(printf %*s $COLUMNS | tr ' ' '-')\n\[\033[38;5;207m\]\d\[\]\[\033[38;5;15m\] \[\]\[\033[38;5;51m\]\t\[\]\[\033[38;5;15m\] \[\]\[\033[38;5;11m\]\u\[\]\[\033[38;5;15m\]@\[\]\[\033[38;5;206m\]\H\[\]\[\033[38;5;201m\]: \[\]\[\033[38;5;47m\]\w\[\]\[\033[38;5;15m\]\n\[\]\[\033[38;5;207m\]$\[\]\[\033[38;5;15m\] \[\]"
 
 PS1="\n\[\033[38;5;207m\]\d \T \[\033[38;5;10m\]\u @ \[\033[38;5;51m\]\H : \[\033[38;5;15m\]\w\n\[\033[38;5;207m\]\[\033[38;5;15m\]$ "
 
-</code></pre>
+
+```
 
 This looks like this 🙂
 
@@ -31,7 +33,9 @@ You can customize one for your self in this useful site <http://bashrcgenerator.
 
 But this is one liner to get all the colors codes int your command prompt and decide your self.
 
-<pre class="lang:sh decode:true ">printf "\nForeground %s\nBackground %s\n\n" "\033[38;5;COLOR_CODE" "\033[48;5;COLOR_CODE"; for i in {0..256}; do echo -en "\033[38;5;${i}m${i}m "; done; printf "\n";</pre>
+```bash
+printf "\nForeground %s\nBackground %s\n\n" "\033[38;5;COLOR_CODE" "\033[48;5;COLOR_CODE"; for i in {0..256}; do echo -en "\033[38;5;${i}m${i}m "; done; printf "\n";
+```
 
 <img class="alignnone wp-image-598 size-full" src="https://blog.vishdaily.com/wp-content/uploads/2016/05/2018-09-14_11h59_50.png" alt="" width="1381" height="200" srcset="https://blog.vishdaily.com/wp-content/uploads/2016/05/2018-09-14_11h59_50.png 1381w, https://blog.vishdaily.com/wp-content/uploads/2016/05/2018-09-14_11h59_50-300x43.png 300w, https://blog.vishdaily.com/wp-content/uploads/2016/05/2018-09-14_11h59_50-768x111.png 768w, https://blog.vishdaily.com/wp-content/uploads/2016/05/2018-09-14_11h59_50-1024x148.png 1024w, https://blog.vishdaily.com/wp-content/uploads/2016/05/2018-09-14_11h59_50-150x22.png 150w" sizes="(max-width: 1381px) 100vw, 1381px" /> 
 
@@ -49,10 +53,10 @@ Bash uses numeric codes to set attributes of the text to be displayed.
 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
 
 <code class="inline">\e[&lt;i>attribute&lt;br />
-code&lt;/i>;&lt;i>text color code&lt;/i>m</code>
+code&lt;/i>;&lt;i>text color code&lt;/i>m
 
 <code class="inline">\e[&lt;i>attribute code&lt;/i>;&lt;i>text color code&lt;/i>;&lt;i>background&lt;br />
-color code&lt;/i>m</code>
+color code&lt;/i>m
 
 `green='\e[0;32m'        # '\e[1;32m' is too bright for white bg.<br />
 endColor='\e[0m'`

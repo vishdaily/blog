@@ -53,17 +53,19 @@ Some Short Cuts
       Alt + Enter For Full Screen
     </li>
     <li>
-      Edit dosbox-{version}.conf<br /> For Linux the configfile is created on the first run in <code>~/.dosbox/ </code>The name is <code>dosbox-&lt;i>{version}&lt;/i>.conf</code> where version is currently 0.74
+      Edit dosbox-{version}.conf<br /> For Linux the configfile is created on the first run in ~/.dosbox/ The name is dosbox-&lt;i>{version}&lt;/i>.conf where version is currently 0.74
     </li>
   </ol>
 </li>
 
-<pre class=""><code>fullscreen=true
+```bash
+fullscreen=true
 fulldouble=true
 fullresolution=1366x768
 windowresolution=1366x768
 &lt;strong>output=opengl&lt;/strong>
-autolock=true</code></pre>
+autolock=true
+```
 
 There are other alternatives if you want to run TurboC on Linux [codeblocks](http://codeblocks.org/) and NetBeans
 

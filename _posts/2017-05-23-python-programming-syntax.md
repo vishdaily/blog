@@ -17,20 +17,24 @@ A quick reference for python installation, syntax and etc.
 
 # Installation
 
-<pre class="lang:sh decode:true">apt-get install python3
-apt-get install python3-pip python3-wheel</pre>
+```bash
+apt-get install python3
+apt-get install python3-pip python3-wheel
+```
 
 # Syntax
 
 ## if
 
-<pre class="">if expression:
+```bash
+if expression:
         print "True"
     elif expression:
         print "False"
      else:  
         print "False"
-</pre>
+
+```
 
 ## multi line
 
@@ -39,13 +43,15 @@ apt-get install python3-pip python3-wheel</pre>
         item_three
  
 days = ['Monday', 'Tuesday', 'Wednesday',
-         'Thursday', 'Friday']</pre>
+         'Thursday', 'Friday']
+```
 
 Statements contained within the [], {}, or () brackets do not need to use the line continuation character.
 
 ## print
 
-<pre>print ( 'Key is : {}  -  {}'.format(key, servername ))</pre>
+<pre>print ( 'Key is : {}  -  {}'.format(key, servername ))
+```
 
 ## while
 
@@ -60,7 +66,8 @@ Statements contained within the [], {}, or () brackets do not need to use the li
         if retries &lt; 0:             
             raise ValueError('invalid user response')         
         print(reminder)
-</pre>
+
+```
 
 ## dictionary declaration
 
@@ -69,7 +76,8 @@ Statements contained within the [], {}, or () brackets do not need to use the li
         ansible_groups[key].append(servername)
     else:
         ansible_groups[key]        =        [servername]
-</pre>
+
+```
 
 ## looping
 
@@ -81,7 +89,8 @@ Statements contained within the [], {}, or () brackets do not need to use the li
 
     for index, value in enumerate(groupsplit):
         print (index)
-</pre>
+
+```
 
 ## string functions
 
@@ -95,4 +104,5 @@ Statements contained within the [], {}, or () brackets do not need to use the li
     "1_2_3_4_5".rsplit("_",2) ==&gt; ['1_2_3, '4', '5']
     "1_2_3_4_5".rsplit("_",3) ==&gt; ['1_2, '3', '4', '5']
 
-</pre>
+
+```

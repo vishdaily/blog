@@ -17,7 +17,8 @@ In the following code, i am starting my apache during the startup.
 
 Create a file /Library/LaunchDaemons/apachefriends.xampp.apache.start.plist
 
-<pre class="lang:xhtml decode:true ">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+```bash
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
 &lt;plist version="1.0"&gt;
 &lt;dict&gt;
@@ -40,6 +41,7 @@ Create a file /Library/LaunchDaemons/apachefriends.xampp.apache.start.plist
 	&lt;true/&gt;
 &lt;/dict&gt;
 &lt;/plist&gt;
-</pre>
+
+```
 
 &nbsp;

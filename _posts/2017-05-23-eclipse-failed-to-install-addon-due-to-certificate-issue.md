@@ -24,4 +24,6 @@ Download this certificate (I did it using chrome -> export functionality)
 
 Add the certificate to cacerts (server trust store for java)
 
-<pre class="">keytool -import -noprompt -trustcacerts -alias proxy_certficate -file /tmp/CertificateToBeTrusted  -keystore /etc/pki/ca-trust/extracted/java/cacerts -storepass changeit</pre>
+```bash
+keytool -import -noprompt -trustcacerts -alias proxy_certficate -file /tmp/CertificateToBeTrusted  -keystore /etc/pki/ca-trust/extracted/java/cacerts -storepass changeit
+```

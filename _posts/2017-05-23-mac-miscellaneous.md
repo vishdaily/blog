@@ -18,26 +18,38 @@ tags:
 
 Some system files are visible in mac finder only when it opened with root privileges.
 
-<pre class="lang:sh decode:true">kdesu dolphin</pre>
+```bash
+kdesu dolphin
+```
 
 ## Change Password Of dmg files
 
-<pre class="lang:sh decode:true ">hdiutil chpass &lt;dmg_file_name&gt;</pre>
+```bash
+hdiutil chpass &lt;dmg_file_name&gt;
+```
 
 ## Secure Delete Deleted Files
 
 **Warning!** It’s _critically important_ that you include the `freespace` portion of that command. If you don’t, `diskutil` will happily start securely erasing the entire disk, instead of just the free space!
 
-<pre class="lang:sh decode:true "># diskutil list</pre>
+```bash
+# diskutil list
+```
 
-<pre class="lang:sh decode:true">diskutil secureErase freespace 1 /dev/disk3s4</pre>
+```bash
+diskutil secureErase freespace 1 /dev/disk3s4
+```
 
 ## Check how fast is your mac write data to its disk
 
-<pre class=""><code>time dd if=/dev/zero bs=1024k of=tstfile count=1024</code></pre>
+```bash
+time dd if=/dev/zero bs=1024k of=tstfile count=1024
+```
 
 ## Secure Delete Files / Folders
 
-<pre class="lang:sh decode:true">srm &lt;file_name&gt; 
+```bash
+srm &lt;file_name&gt; 
 srm -r &lt;folder_name&gt;
-</pre>
+
+```

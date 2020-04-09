@@ -11,7 +11,8 @@ categories:
 tags:
   - audio video conversion
 ---
-<pre class="lang:sh decode:true "># get file info
+```bash
+# get file info
 ffmpeg -i input.mp4
 
 # mkv -&gt; mp3
@@ -63,4 +64,5 @@ ffmpeg -f image2 -i input%d.jpg output.mpg
 # video to images
 ffmpeg -i input.mpg output%d.jpg
 
-</pre>
+
+```

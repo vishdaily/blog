@@ -26,19 +26,24 @@ Package manager for Mac.
 
 https://brew.sh
 
-<pre class="lang:default decode:true">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</pre>
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 ## Some frequently used commands
 
-<pre class="lang:sh decode:true" title="search | info | install | uninstall commands">brew search &lt;package&gt;
+```bash
+brew search &lt;package&gt;
 brew info &lt;imagemagick&gt;
 brew install &lt;package&gt;
 brew --dry-run uninstall &lt;package&gt;
 brew reinstall &lt;imagemagick&gt;
 brew list # displays list of installed packages
-brew leaves # displays formulas that are not dependent on other installed formulas</pre>
+brew leaves # displays formulas that are not dependent on other installed formulas
+```
 
-<pre class="lang:default decode:true" title="Some miscellaneous commands"># Remove all the packages installed by brew
+```bash
+# Remove all the packages installed by brew
 brew list -1 | xargs brew rm
 
 # unlink the tool short cut and link again if the command is not found after installation
@@ -52,7 +57,8 @@ brew deps terminator | egrep -v "openssl|gettext" | xargs brew uninstall
 
 # List dependencies of the given formula 
 brew deps osxfuse
-</pre>
+
+```
 
 # MacPorts
 
@@ -62,7 +68,8 @@ https://www.macports.org
 
 ## Some frequently used commands
 
-<pre class="lang:sh decode:true " title="search | install | uninstall commands">sudo port search &lt;portname&gt;
+```bash
+sudo port search &lt;portname&gt;
 sudo port info &lt;portname&gt;
 sudo port install &lt;portname&gt;
 
@@ -92,11 +99,14 @@ port contents --size depof:ghostscript
 port select --list python
 sudo port select --set python python27
 
-</pre>
 
-<pre class="lang:sh decode:true" title="Miscellaneous"># while port echo leaves also list the one which doesn't have dependencies, this script gives all the ports. difference between these two lists will give which are mainly installed via port install command.
+```
+
+```bash
+# while port echo leaves also list the one which doesn't have dependencies, this script gives all the ports. difference between these two lists will give which are mainly installed via port install command.
 list1=$(port echo leaves | cut -d'@' -f1)
-list2=$(port installed | cut -d'(' -f1 | cut -d'@' -f1 | grep -v "following ports" | xargs port dependents | grep "has no dependents")</pre>
+list2=$(port installed | cut -d'(' -f1 | cut -d'@' -f1 | grep -v "following ports" | xargs port dependents | grep "has no dependents")
+```
 
 &nbsp;
 

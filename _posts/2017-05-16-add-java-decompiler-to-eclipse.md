@@ -17,7 +17,9 @@ Every time i install eclipse it is a pain trying various methods to add de-compi
 
 In your eclipse, Go to Help -> Install New Software -> Click on Add, Then paste the following update site url in both Name and Location fields
 
-<pre class="">http://mchr3k-eclipse.appspot.com/</pre>
+```bash
+http://mchr3k-eclipse.appspot.com/
+```
 
   1. Selecting the above url from the drop down, displays available plugins from the update site.
   2. From the list select &#8216;Java Decompiler Eclipse Plug-in&#8217;

@@ -33,7 +33,8 @@ In addition to tmux installing tmuxinator, will drastically improves the way one
 
 After defining this daily.yml template, just run _mux daily_ to open tmux session with the windows and panes created as defined in the template.
 
-<pre class="lang:sh decode:true ">##&gt; vim ~/.tmuxinator/daily.yml
+```bash
+##&gt; vim ~/.tmuxinator/daily.yml
 
 name: vishdaily-workspace
 root: ~/
@@ -59,7 +60,8 @@ windows:
          - cd ~ && clear
          - cd ~ && clear
          - cd ~ && clear
-</pre>
+
+```
 
 ### Customizing Tmux Shortcuts / Configuring Tmux Look & Feel
 
@@ -67,7 +69,8 @@ If one wants to **change the default shortcuts**, this can be achieved by editin
 
 Here mainly, I am using character | for vertical split and &#8211; for horizontal split. Using arrows keys for navigating between panes. At the end customizing how the window and pane information should be displayed.
 
-<pre class="lang:sh decode:true"># remap prefix from 'C-b' to 'C-a'
+```bash
+# remap prefix from 'C-b' to 'C-a'
 
 #unbind C-b
 #set-option -g prefix C-a
@@ -105,6 +108,7 @@ set -g pane-base-index 1
 source-file "${HOME}/linux-configs/tmux/tmux-themepack/powerline/block/green-vish.tmuxtheme"
 
 
-</pre>
+
+```
 
 &nbsp;
