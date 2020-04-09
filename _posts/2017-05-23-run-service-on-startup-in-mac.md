@@ -21,25 +21,25 @@ Create a file /Library/LaunchDaemons/apachefriends.xampp.apache.start.plist
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>EnableTransactions</key>
-	<true/>
-	<key>Label</key>
-	<string>apachefriends.xampp.apache.start</string>
-	<key>ProgramArguments</key>
-	<array>
-		<string>/Applications/XAMPP/xamppfiles/xampp</string>
-		<string>startapache</string>
-	</array>
-	<key>RunAtLoad</key>
-	<true/>
-	<key>WorkingDirectory</key>
-	<string>/Applications/XAMPP/xamppfiles</string>
-	<key>KeepAlive</key>
-	<false/>
-	<key>AbandonProcessGroup</key>
-	<true/>
-</dict>
+    <dict>
+    <key>EnableTransactions</key>
+    <true/>
+    <key>Label</key>
+    <string>apachefriends.xampp.apache.start</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Applications/XAMPP/xamppfiles/xampp</string>
+        <string>startapache</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>WorkingDirectory</key>
+    <string>/Applications/XAMPP/xamppfiles</string>
+    <key>KeepAlive</key>
+    <false/>
+    <key>AbandonProcessGroup</key>
+    <true/>
+    </dict>
 </plist>
 
 ```
