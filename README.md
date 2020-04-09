@@ -1,3 +1,3 @@
 # Hello World! 
 
-![alt text](images/test.jpg)
+![alt text](images/test.png)
