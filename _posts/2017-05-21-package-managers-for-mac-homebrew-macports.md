@@ -125,6 +125,7 @@ Installed via Macports
 Installed via Homebrew
 
 |Tool|Description|
-|wget|Description|
-|watch|Description|
+|----|-----------|
+|wget||
+|watch||
 |imagemagick|tools to manipulate images|
