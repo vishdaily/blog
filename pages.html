@@ -16,7 +16,7 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
     <li>
         <h3>
             <a class="page-link{% if page.url == lesson.url %} active{% endif %}" href="{{ lesson.url | absolute_url }}">{{ lesson.title | escape }}</a>
-            ( {% for tag in page.tags %}
+            ( {% for tag in lesson.tags %}
             <a class="tag" href="/blog/tags.html#{{ tag | slugify }}">{{ tag }}</a>&nbsp;
         {% endfor %})
         </h3>
