@@ -9,10 +9,10 @@ permalink: /index.php/computers/developer-tools/eclipse-shortcut-keys/
 post_icon:
   - eclipse.png
 categories:
-  - Developer Tools
+  - developer-tools
 tags:
   - eclipse
-  - shortcut keys
+  - shortcut-keys
 ---
 ## Changing existing shortcut keys
 

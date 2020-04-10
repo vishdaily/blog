@@ -9,7 +9,7 @@ permalink: /index.php/computers/databases/mysql-commands/
 post_icon:
   - mysql.png
 categories:
-  - Databases
+  - databases
 tags:
   - mysql
 ---

@@ -9,7 +9,7 @@ permalink: /index.php/computers/mac/run-service-on-startup-in-mac/
 post_icon:
   - mac-osx.png
 categories:
-  - Mac
+  - mac
 tags:
   - mac
 ---

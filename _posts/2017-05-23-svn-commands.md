@@ -9,7 +9,7 @@ permalink: /index.php/computers/subversions/svn-commands/
 post_icon:
   - subversion.png
 categories:
-  - Subversions
+  - subversions
 tags:
   - svn
 ---

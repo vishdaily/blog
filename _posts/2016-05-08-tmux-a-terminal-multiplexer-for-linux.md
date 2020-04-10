@@ -9,7 +9,7 @@ permalink: /index.php/computers/linux/tmux-a-terminal-multiplexer-for-linux/
 post_icon:
   - linux.png
 categories:
-  - Linux
+  - linux
 tags:
   - terminal
 ---

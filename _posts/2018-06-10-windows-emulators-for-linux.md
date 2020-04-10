@@ -9,7 +9,7 @@ permalink: /index.php/computers/linux/windows-emulators-for-linux/
 post_icon:
   - linux
 categories:
-  - Linux
+  - linux
 tags:
   - linux
   - windows-emulators

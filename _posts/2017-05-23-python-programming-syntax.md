@@ -9,7 +9,7 @@ permalink: /index.php/computers/programming-languages/python-programming-syntax/
 post_icon:
   - python.png
 categories:
-  - Programming Languages
+  - programming-languages
 tags:
   - python
 ---

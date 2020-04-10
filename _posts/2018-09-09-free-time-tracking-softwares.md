@@ -7,9 +7,9 @@ layout: post
 guid: https://blog.vishdaily.com/?p=592
 permalink: /index.php/computers/productivity-tools/free-time-tracking-softwares/
 categories:
-  - Productivity Tools
+  - productivity-tools
 tags:
-  - time tracking tools
+  - time-tracking-tools
 ---
 Here are some free time tracking desktop applications
 

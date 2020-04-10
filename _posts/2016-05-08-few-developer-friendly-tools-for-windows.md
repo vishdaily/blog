@@ -9,9 +9,9 @@ permalink: /index.php/computers/developer-tools/few-developer-friendly-tools-for
 post_icon:
   - windows.png
 categories:
-  - Developer Tools
+  - developer-tools
 tags:
-  - developer tools
+  - developer-tools
   - windows
 ---
 I want to share you all about some of my favorite tools / software&#8217;s I use which assist me in my daily development tasks.

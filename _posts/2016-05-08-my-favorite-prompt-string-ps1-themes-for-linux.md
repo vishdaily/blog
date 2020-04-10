@@ -9,9 +9,9 @@ permalink: /index.php/computers/linux/my-favorite-prompt-string-ps1-themes-for-l
 post_icon:
   - linux.png
 categories:
-  - Linux
+  - linux
 tags:
-  - shell scripting
+  - shell
   - terminal
 ---
 Following are my favorite PS1 strings which i use frequently in my bashrc file.

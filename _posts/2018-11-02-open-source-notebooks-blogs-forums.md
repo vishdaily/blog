@@ -7,13 +7,13 @@ layout: post
 guid: https://blog.vishdaily.com/?p=613
 permalink: /index.php/computers/productivity-tools/open-source-notebooks-blogs-forums/
 categories:
-  - Productivity Tools
+  - productivity-tools
 tags:
   - blogs
   - forums
   - notebooks
   - opensource
-  - single page applications
+  - single-page-applications
 ---
 # Notebooks
 

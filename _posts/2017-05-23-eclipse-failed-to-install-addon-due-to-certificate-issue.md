@@ -9,10 +9,10 @@ permalink: /index.php/computers/developer-tools/eclipse-failed-to-install-addon-
 post_icon:
   - eclipse.png
 categories:
-  - Developer Tools
+  - developer-tools
 tags:
   - eclipse
-  - java certificates
+  - java-certificates
 ---
 In my case I wanted to install subclipse, the eclipse market place is trying to connect to <https://dl.bintray.com/> but resulting in to certificate error due to bad domain name. True it could be some fake sites pretending to be the trusted. But in this case, i know that this is this exact site.
 

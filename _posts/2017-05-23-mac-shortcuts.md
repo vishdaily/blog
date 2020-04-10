@@ -9,9 +9,9 @@ permalink: /index.php/computers/mac/mac-shortcuts/
 post_icon:
   - mac-osx.png
 categories:
-  - Mac
+  - mac
 tags:
-  - shortcut keys
+  - shortcut-keys
 ---
 
 |Action|Shortcut|

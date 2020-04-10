@@ -7,11 +7,11 @@ layout: post
 guid: https://blog.vishdaily.com/?p=481
 permalink: /index.php/photography/geotag-your-photos/
 categories:
-  - Photography
+  - photography
 tags:
   - geo-tagging
   - iphone-apps
-  - mac softwares
+  - mac-softwares
   - photography
 ---
 Cameras which doesn&#8217;t have inbuilt geo tag capabilities can be supplemented with your phone if your phone has in built GPS.

@@ -9,7 +9,7 @@ permalink: /index.php/computers/developer-tools/add-java-decompiler-to-eclipse/
 post_icon:
   - eclipse.png
 categories:
-  - Developer Tools
+  - developer-tools
 tags:
   - eclipse
 ---

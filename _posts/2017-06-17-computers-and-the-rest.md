@@ -7,9 +7,9 @@ layout: post
 guid: https://blog.vishdaily.com/?p=435
 permalink: /index.php/life/computers-and-the-rest/
 categories:
-  - Life
+  - life
 tags:
-  - about me
+  - about-me
   - life
 ---
 At this moment, If I think, my daily routine drills down to &#8216;Computers&#8217; and &#8216;The Rest&#8217;. (I already have a feeling, that others are already feeling sorry for me. please don&#8217;t 🙂 )

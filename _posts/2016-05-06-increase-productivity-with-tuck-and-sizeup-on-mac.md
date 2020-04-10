@@ -11,7 +11,7 @@ post_icon:
 categories:
   - Mac
 tags:
-  - mac softwares
+  - mac
 ---
 I was searching for easily maximizing windows in mac to occupy full window (note its not full screen mode that OS supports by default) rather than manually dragging the edges to corners. I learned about two nice little tools Tuck and SizeUp which brought more nice features which i am using almost every time. Thank you <http://apple.stackexchange.com/questions/115895/how-to-maximise-a-window-to-fill-up-screen-in-mavericks> for helping me discover these nice tools.
 

@@ -7,7 +7,7 @@ layout: post
 guid: https://blog.vishdaily.com/?p=484
 permalink: /index.php/germany/driving-license-in-germany/
 categories:
-  - Germany
+  - germany
 tags:
   - driving-license
   - germany

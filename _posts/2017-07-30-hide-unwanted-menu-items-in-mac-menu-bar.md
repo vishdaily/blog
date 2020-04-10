@@ -9,9 +9,9 @@ permalink: /index.php/computers/mac/hide-unwanted-menu-items-in-mac-menu-bar/
 post_icon:
   - mac-osx.png
 categories:
-  - Mac
+  - mac
 tags:
-  - mac softwares
+  - mac-softwares
 ---
 Its sad that mac doesn&#8217;t provide possibility to manage menu icons with out help of third party softwares. There are some free one&#8217;s but with very restricted functionality. The one i have tested is a commercial one but free for 4 weeks.
 

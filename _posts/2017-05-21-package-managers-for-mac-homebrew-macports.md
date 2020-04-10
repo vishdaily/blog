@@ -9,7 +9,7 @@ permalink: /index.php/computers/mac/package-managers-for-mac-homebrew-macports/
 post_icon:
   - mac-osx.png
 categories:
-  - Mac
+  - mac
 tags:
   - homebrew
   - mac

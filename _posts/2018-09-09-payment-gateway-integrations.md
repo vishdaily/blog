@@ -7,9 +7,9 @@ layout: post
 guid: https://blog.vishdaily.com/?p=589
 permalink: /index.php/computers/programming-languages/payment-gateway-integrations/
 categories:
-  - Programming Languages
+  - programming-languages
 tags:
-  - payment gateways
+  - payment-gateways
 ---
 Here are some list of payment gateway integration service providers that one can use with many programming languages.
 

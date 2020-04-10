@@ -7,9 +7,9 @@ layout: post
 guid: https://blog.vishdaily.com/?p=607
 permalink: /index.php/computers/bash-scripting/video-audio-format-conversion-using-ffmpeg/
 categories:
-  - Bash Scripting
+  - bash-scripting
 tags:
-  - audio video conversion
+  - audio-video
 ---
 ```bash
 # get file info
