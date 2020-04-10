@@ -13,5 +13,3 @@ theme: jekyll-theme-hacker
 
 plugins:
  - jekyll-feed
-
-# Include _pages directory and its contents
