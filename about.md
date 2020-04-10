@@ -13,3 +13,6 @@ Today i was again searching all those places and digging through my browser hist
 I try to post all my experiences, ideas, struggles, opinions and various information which i think is useful to my self and also to public.
 
 Any opinions or thoughts i post here are purely based on my experience and do not intend to hurt any others feelings in any way.
+
+
+Editing from work copy
