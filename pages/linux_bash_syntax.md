@@ -4,7 +4,6 @@ title: Bash Syntax
 categories: [linux]
 tags: [bash, shell-scripting]
 type: page
-nav: true
 ---
 
 ### while loop
