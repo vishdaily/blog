@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Pages
-nav: true
 ---
 
 {% comment %}
@@ -11,20 +10,11 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
 {% endcomment %}
 
 <ul>
-{% for post in site.pages %}
-	{% if page.layout == 'page' %}  
-	<li>
-	<h3>
-	<a href="{{ post.url | relative_url }}">
-	{{ post.title | escape }}
-	</a>
-	( {% for tag in post.tags %}
-		<a class="tag" href="/blog/tags.html#{{ tag | slugify }}">{{ tag }}</a>&nbsp;
-	{% endfor %})
-	</h3>
-	</li>
-	{% endif %}
-{% endfor %}
+    {% for lesson in site.pages %}
+    <li>
+        <h3>
+            <a class="page-link{% if page.url == lesson.url %} active{% endif %}" href="{{ lesson.url | absolute_url }}">{{ lesson.title | escape }}</a>
+        </h3>
+    </li>
+    {% endfor %}
 </ul>
-
-
