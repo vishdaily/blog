@@ -16,3 +16,6 @@ plugins:
 
 # Include _pages directory and its contents
 include: ['_pages']
+
+collections:
+- pages

@@ -6,4 +6,4 @@ tags: [german]
 type: page
 ---
 
-
+Here goes the german language related topics
