@@ -15,7 +15,6 @@ plugins:
  - jekyll-feed
 
 # Include _pages directory and its contents
-include: ['_pages']
 
 collections:
 - pages
