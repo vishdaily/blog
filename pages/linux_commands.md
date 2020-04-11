@@ -57,3 +57,19 @@ yum --disablerepo="*" --enablerepo="epel" list available | grep <package>
 # Yum Lock Package Version At a Particular Version
 yum versionlock package1 package2
 ```
+
+
+### repoquery
+
+```bash
+# query information from yum repositories.
+repoquery -q -l —plugins ksh
+```
+
+### wget
+
+```bash
+wget http://download.virtualbox.org/virtualbox/5.0.20/
+# specify headers parameter
+wget -O/tmp/tmp —header=‘HostName: cloud.vishdaily.com’ vishdaily.com
+```
