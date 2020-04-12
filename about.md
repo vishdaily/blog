@@ -14,3 +14,5 @@ Any opinions or thoughts i post here are purely based on my experience and do no
 
 
 Editing from work copy
+
+editing from text editor
