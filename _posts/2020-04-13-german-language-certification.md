@@ -14,7 +14,7 @@ tags:
 
 # Various platforms to take exams
 
-1. TestDaf
+## TestDaf
 
 the testdaf website has list of test centers per country and their respective locations
 
@@ -22,15 +22,15 @@ the testdaf website has list of test centers per country and their respective lo
 
 The wiki [link](https://en.m.wikipedia.org/wiki/TestDaF) has more information
 
-2. Geothe
+## Geothe
 
 [goethe](https://www.goethe.de)
 
-3. Telc
+## Telc
 
 [telc](https://www.telc.net)
 
-4. DTZ (Deutschtest für Zuwanderer) (German test for immigrants)
+## DTZ (Deutschtest für Zuwanderer) (German test for immigrants)
 
 This is the test for the immigrants who wants to apply for Citizenship in germany. 
 For citizenship purpose, this exam has be take together with another test ```Leben in Deutschland```
