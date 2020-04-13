@@ -13,6 +13,7 @@ categories:
 tags:
   - mac-softwares
 ---
+
 I was struggling for long time trying to record input (microphone) and output (system sound) simultaneously until i came across the a nice youtube video explaining how to achieve this. It requires two softwares Soundflowerbed and LineIn to achieve this. Here are the links where one can download both.
 
 <p style="padding-left: 30px;">

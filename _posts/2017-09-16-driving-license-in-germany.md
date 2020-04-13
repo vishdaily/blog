@@ -12,6 +12,7 @@ tags:
   - driving-license
   - germany
 ---
+
 Getting a driving license in Germany is expensive ! But it made sense to me after I started to drive on these roads. Rules & the Roads, that are designed to make travel safe and easy are not achievable with out proper road education in the first place. People could complain about too many rules but I personally like it.
 
 Despite of many rules and having safety processes in place, unfortunate events are unavoidable but, It could be reduced if people are cautious and follow the rules. Safety is tying to be ensured by making people accountable (fines) for their small mistakes (skipping red light, speed restrictions) hence trying to reduce the chance of happening an unfortunate events.
