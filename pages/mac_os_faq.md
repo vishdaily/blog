@@ -6,12 +6,31 @@ tags: [macos, mac]
 type: page
 ---
 
-## FAQ Paths
+# Commands
 
-Notification Agents files are placed under
+### launchctl
+lists all running agents and daemons
+
+```bash
+launchctl list
+
+#  prints out the root daemons, and only the root deamons.
+sudo launchctl list
+
+# one liner to get all the active daemons and their plist paths
+grep -B 1 -A 1 "active count = 1$" <<< "$(launchctl dumpstate)"
+```
+
+# Paths
+
+### Notification Agents files are placed under
 ~/Library/Application Support/
 
-Lauch Agent plist files
-~/Library/LaunchAgents
+### Loaded or Unloaded launch agents like to hide
+ |~/Library/LaunchAgents|Per-user agents provided by the user|
+ |/Library/LaunchAgents|Per-user agents provided by the administrator.|
+ |/Library/LaunchDaemons|System wide daemons provided by the administrator.|
+ |/System/Library/LaunchAgents|OS X Per-user agents.|
+ |/System/Library/LaunchDaemons|OS X System wide daemons.|
 
 

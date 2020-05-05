@@ -66,6 +66,26 @@ do
     echo "$server uptime is $result"
 done
 ```
+### Loop through an array
+
+```bash
+launchctlFind () {
+    LaunchctlPATHS=( \
+        ~/Library/LaunchAgents \
+        /Library/LaunchAgents \
+        /Library/LaunchDaemons \
+        /System/Library/LaunchAgents \
+        /System/Library/LaunchDaemons \
+    )
+
+    for curPATH in "${LaunchctlPATHS[@]}"
+    do
+        grep -r "$curPATH" -e "$1"
+    done
+    return 0;
+}
+```
+
 ### Round float values
 ```bash
 # Round Float value to floor 99.8 -> 100
