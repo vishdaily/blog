@@ -23,14 +23,16 @@ grep -B 1 -A 1 "active count = 1$" <<< "$(launchctl dumpstate)"
 
 # Paths
 
-### Notification Agents files are placed under
+### Notification Agents
 ~/Library/Application Support/
 
 ### Loaded or Unloaded launch agents like to hide
- |~/Library/LaunchAgents|Per-user agents provided by the user|
- |/Library/LaunchAgents|Per-user agents provided by the administrator.|
- |/Library/LaunchDaemons|System wide daemons provided by the administrator.|
- |/System/Library/LaunchAgents|OS X Per-user agents.|
- |/System/Library/LaunchDaemons|OS X System wide daemons.|
+|Path|Desc|
+|----|----|
+|~/Library/LaunchAgents|Per-user agents provided by the user|
+|/Library/LaunchAgents|Per-user agents provided by the administrator.|
+|/Library/LaunchDaemons|System wide daemons provided by the administrator.|
+|/System/Library/LaunchAgents|OS X Per-user agents.|
+|/System/Library/LaunchDaemons|OS X System wide daemons.|
 
 
