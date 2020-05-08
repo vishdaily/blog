@@ -6,6 +6,7 @@ tags: [bash, shell-scripting]
 type: page
 ---
 
+
 ### Get command line parameters using $#
 ```bash
 if [[ $# -eq 2 ]]; then
@@ -353,3 +354,25 @@ if [[ $string == *"test"* ]]; then
   echo "It's there!"
 fi
 ```
+
+### loop through grep result
+
+```bash
+grep xyz abc.txt | while read -r line ; do
+    echo "Processing $line"
+    # your code goes here
+done
+```
+
+>The -r option to read prevents backslash interpretation (usually used as a backslash newline pair, to continue over multiple lines or to escape the delimiters). Without this option, any unescaped backslashes in the input will be discarded. You should almost always use the -r option with read.
+
+>In the scenario above IFS= prevents trimming of leading and trailing whitespace. Remove it if you want this effect.
+
+> http://mywiki.wooledge.org/BashFAQ/001
+```bash
+while read -r line ; do
+    echo "Processing $line"
+    # your code goes here
+done < <(grep xyz abc.txt)
+```
+
