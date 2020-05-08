@@ -26,7 +26,7 @@ layout: default
       {%- endif -%}
       {%- if page.tags -%}
       &nbsp;Tags:&nbsp;{% for tag in page.tags %}
-      <a class="tag" href="/blog/tags.html#{{ tag | slugify }}">{{ tag }}</a>&nbsp;
+      <a class="tag" href="/tags.html#{{ tag | slugify }}">{{ tag }}</a>&nbsp;
       {% endfor %}
       {%- endif -%}</p>
   </header>
