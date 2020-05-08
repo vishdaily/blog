@@ -368,7 +368,8 @@ done
 
 >In the scenario above IFS= prevents trimming of leading and trailing whitespace. Remove it if you want this effect.
 
-> http://mywiki.wooledge.org/BashFAQ/001
+* http://mywiki.wooledge.org/BashFAQ/001
+
 ```bash
 while read -r line ; do
     echo "Processing $line"
