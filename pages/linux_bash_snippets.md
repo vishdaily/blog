@@ -87,6 +87,17 @@ launchctlFind () {
 }
 ```
 
+```bash
+# another example
+declare -a arr_str=("STR1"
+                    "STR2"
+                    "STR3")
+for str in "${arr_str[@]}"; do
+    echo "$str";
+done
+```
+
+
 ### Round float values
 ```bash
 # Round Float value to floor 99.8 -> 100
