@@ -264,7 +264,7 @@ EOF
 
 ```bash
 # In order to disable interpreting variables use single quotes
- cat >> 'EOF' > /drives/file.txt
+cat >> 'EOF' > /drives/file.txt
 Disable vairable interpretation $VAR
 EOF
 ```
