@@ -1,5 +1,6 @@
 ---
 title: Applying for German Citizenship
+layout: post
 tags:
   - germany
   - life-in-germany

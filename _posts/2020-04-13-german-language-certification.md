@@ -1,5 +1,6 @@
 ---
 title: German Language Certifications
+layout: post
 tags:
   - german
   - life-in-germany
