@@ -28,6 +28,7 @@ If you want to learn in depth about firewalls in general
 
 ### Logging dropped packets
 [https://www.thegeekstuff.com/2012/08/iptables-log-packets/]
+
 ```bash
 # Log All Dropped Packets (both Incoming and Outgoing)
 iptables -N LOGGING
@@ -36,6 +37,7 @@ iptables -A OUTPUT -j LOGGING
 iptables -A LOGGING -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4
 iptables -A LOGGING -j DROP
 ```
+
 In Ubuntu the logs are logged in /var/log/kern.log
 Well, you can change the log location /etc/syslog.conf (kern.warning   /var/log/custom.log)
 In other platforms, it might get logged to /var/log/messages
@@ -70,13 +72,21 @@ Upon, reboot, these rules will be reloading. iptables-persistent package will en
 iptables-save > /etc/iptables/rules.v4
 ```
 
-IMPORTANT:: 
+IMPORTANT::
+
+If connecting remotely we must first temporarily set the default policy on the INPUT chain to ACCEPT otherwise once we flush the current rules we will be locked out of our server.
+We used the -F switch to flush all existing rules so we start with a clean state from which to add new rules.
+```bash
+iptables -P INPUT ACCEPT
+iptables -F
+```
 
 Docker inserts its own rules in to the iptables.
 If you plan to open any ports and map them to localhost:3306 (for mysql), then this port is exposed to public
 in order to block it from external access, modifying iptables is mandatory. 
 Docker introduces new chain DOCKER-USER.
 Before you do anything, make sure to run this, which deletes the default behaviour is to return.
+It is also important to accept -o docker0 otherwise other containers cannot connect to mysql database
 
 ```bash
 iptables -D DOCKER-USER -j RETURN
@@ -85,6 +95,7 @@ After this we would insert our own rules
 ```bash
 iptables -P DOCKER-USER DROP
 iptables -A DOCKER-USER -i lo -p all -j ACCEPT
+iptables -A DOCKER-USER -o docker0 -j ACCEPT
 iptables -A DOCKER-USER -m state --state RELATED,ESTABLISHED -j ACCEPT
 iptables -A DOCKER-USER -s 127.0.0.1 -j ACCEPT
 iptables -A DOCKER-USER -p tcp -m tcp --dport 22 -j ACCEPT 
@@ -96,13 +107,22 @@ iptables -A DOCKER-USER -j DROP
 Okay here is everything together.
 
 ```bash
+# If connecting remotely we must first temporarily set the default policy on the INPUT chain to ACCEPT otherwise once we flush
+iptables -P INPUT ACCEPT
+iptables -F
+# Before you do anything, make sure to run this, which deletes the default behaviour is to return.
+iptables -D DOCKER-USER -j RETURN
+
+# Create new chain called Logging
+iptables -N LOGGING
+
 iptables -P INPUT DROP
 iptables -A INPUT -i lo -p all -j ACCEPT
 iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 iptables -A INPUT -s 127.0.0.1 -j ACCEPT
-iptables -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT 
-iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT 
-iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT 
+iptables -A INPUT -p tcp -m tcp --dport 45678 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 # The below line is commented because, the packets that are not ACCEPTED from the above rules
 # will be jumped to LOGGING policy where these will be logged, and finally DROPPED.
 # if the below line is uncommented, the packets will not be propogated further
@@ -111,19 +131,17 @@ iptables -A INPUT -p tcp --dport 22 -m recent --update --seconds 600 --hitcount 
 iptables -A INPUT -p tcp --dport 22 -m recent --set --name SSH --rsource -j ACCEPT
 # The first rule says that for any incoming connection on port 22, iptables first checks to see if this same IP address has already tried to connect 3+ times over the last 600 seconds. If it has, the newest incoming connection is rejected. 
 # If it hasn't, the second rule is matched, accepting the connection.
-iptables -N LOGGING
 iptables -A INPUT -j LOGGING
-iptables -A LOGGING -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4
-iptables -A LOGGING -j DROP
-
-iptables -P DOCKER-USER DROP
+#iptables -P DOCKER-USER DROP
+iptables -A DOCKER-USER -o eth0 -j ACCEPT
+iptables -A DOCKER-USER -m conntrack --ctstate RELATED,ESTABLISHED -j RETURN
 iptables -A DOCKER-USER -i lo -p all -j ACCEPT
 iptables -A DOCKER-USER -m state --state RELATED,ESTABLISHED -j ACCEPT
 iptables -A DOCKER-USER -s 127.0.0.1 -j ACCEPT
-iptables -A DOCKER-USER -p tcp -m tcp --dport 22 -j ACCEPT 
-iptables -A DOCKER-USER -p tcp -m tcp --dport 80 -j ACCEPT 
-iptables -A DOCKER-USER -p tcp -m tcp --dport 443 -j ACCEPT 
-iptables -A DOCKER-USER -j DROP
+# Accept only the ports to the outside world that are opened by docker
+iptables -A DOCKER-USER -p tcp -m tcp --dport 443 -j ACCEPT
+#iptables -A DOCKER-USER -j DROP
+iptables -A DOCKER-USER -j LOGGING
 
 iptables-save > /etc/iptables/rules.v4
 ```
@@ -296,3 +314,6 @@ RUN apt-get -y upgrade
 ```
 
 
+## Debug
+
+https://medium.com/@pimterry/5-ways-to-debug-an-exploding-docker-container-4f729e2c0aa8

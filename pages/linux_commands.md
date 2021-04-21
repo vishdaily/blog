@@ -39,6 +39,24 @@ cat /etc/passwd | cut -d: -f2
 p=$(cat /proc/1336/environ | tr '\0' '\n'
 ```
 
+### convert
+```bash
+# install imagemagick to use convert command
+# For vertical stacking (top to bottom):
+convert -append 1.jpg 2.jpg out.jpg
+
+# For horizontal stacking (left to right):
+convert +append 1.jpg 2.jpg out.jpg
+
+# Reduce image by reducing the resolution
+convert ID_Photo_5.1x5.1cm_2812021_212605.jpg.jpg -resize 500 output.jpg
+convert ID_Photo_5.1x5.1cm_2812021_212605.jpg.jpg -resize 500 -quality 50 output.jpg
+
+# Reduce dpi or ppi 
+convert -units PixelsPerInch output.jpg -density 250 output1.jpg
+
+```
+
 ### crontab
 ```bash
 # http://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/
@@ -129,6 +147,8 @@ ffmpeg -i input.mp4 -aspect 16:9 output.mp4
 ffmpeg -i audio.mp3 -ss 00:01:54 -to 00:06:53 -c copy output.mp3
 ffmpeg -i input.mp4 -ss 00:00:50 -codec copy -t 50 output.mp4
 ffmpeg -i st.mp4 -s 00:00:00 -to 00:58:40 -codec copy st_output.mp4
+# to cut media from middle to somewhere -to isn't working but -t is..
+ffmpeg -i "input.mp4" -ss 37:00 -t 01:16:00 -codec copy "output.mp4"
 # join files
 ffmpeg -f concat -i join.txt -c copy output.mp4
 fmpeg -i input.mp4 -i subtitle.srt -map 0 -map 1 -c copy -c:v libx264 -crf 23 -preset veryfast output.mp4
@@ -246,6 +266,13 @@ groupdel  git_users
 ### groups
 ```bash
 groups test
+```
+
+### gs
+
+```bash
+# reduce pdf size
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dBATCH -dColorImageResolution=120 -sOutputFile=output.pdf input.pdf
 ```
 
 ### gzip

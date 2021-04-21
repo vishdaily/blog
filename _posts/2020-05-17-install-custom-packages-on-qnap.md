@@ -21,7 +21,7 @@ Run /opt/bin/Entware.sh which will move all the files to a saperate dir and link
 
 ```bash
 /opt/bin/opkg --help
-/opb/bin/opkg install screen
+/opt/bin/opkg install screen
 ```
 
 Running the screen might give the following errors initially

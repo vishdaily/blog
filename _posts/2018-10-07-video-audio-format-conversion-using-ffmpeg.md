@@ -16,20 +16,27 @@ tags:
 ffmpeg -i input.mp4
 
 # mkv -> mp3
- ffmpeg -i "movie.mkv" -vn -c:a libmp3lame -y "sound.mp3"
+ffmpeg -i "movie.mkv" -vn -c:a libmp3lame -y "sound.mp3"
 
- # cut video from hh:mm:ss.0 -> +t 2064 seconds 
+# cut video from hh:mm:ss.0 -> +t 2064 seconds
 # from 22 minutes to 54.40 minutes which is 22 minutes + 2064 seconds (34.40 minutes)
- ffmpeg -ss 00:22:00.0 -i input.mp4 -c copy -t 2064  output.mp4
+ffmpeg -ss 00:22:00.0 -i input.mp4 -c copy -t 2064  output.mp4
 
 # Split mp3 in to parts where each part is 60 minutes (3600 seconds) file name as out000.mp3, out001.mp3, out002.mp3 etc
 ffmpeg -i 2019_09_24_09_22_44.mp3 -f segment -segment_time 3600 -c copy out%03d.mp3
+
+
+# cut mp3 from hh:mm:ss to hh:mm:ss
+ffmpeg -ss 00:00:14 -t 00:04:04 -i "input.mp3" -acodec copy outputfile.mp3
 
 # to cut a part of the video
 ## output cut video re-encoded
 ffmpeg -i input.mp4 -ss 1:12 -t 2:50 output-cut-reencoded.mp4
 ## output cut video streams just copied
 ffmpeg -i input.mp4 -c:v copy -c:a copy -ss 1:12 -t 2:50 output-cut.mp4
+# working
+ffmpeg -i "input.mp4" -ss 29:30 -to 01:31:20 -codec copy "output.mp4"
+
 
 # input-list contails files to be appended. one file per line.
 ffmpeg -f concat -i input-list.txt -c copy tank-mix.mp4

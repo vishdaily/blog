@@ -5,11 +5,19 @@ categories: [references]
 tags: [urls, references]
 type: page
 ---
+### DevOps
+
+* [https://devdocs.io]
+* [https://www.raywenderlich.com]
+* [https://code.tutsplus.com/tutorials]
+* https://lzone.de/cheat-sheet/DevOps%20Services
 
 ### Bash
 
 * http://mywiki.wooledge.org/BashFAQ/001
 * http://wiki.bash-hackers.org/syntax/expansion/proc_subst
+* http://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html
+* https://www.shellcheck.net
 
 ### Firewalls
 
@@ -21,3 +29,29 @@ type: page
 
 ### Mac
 * https://sourabhbajaj.com/mac-setup/
+
+### Internet
+
+* https://www.fakemail.net/
+* https://temp-mail.org/en/
+* https://www.guerrillamail.com/
+* https://trashmail.com/
+
+### Networking
+
+* https://crt.sh/
+
+
+### Python
+
+#### Threads
+* https://www.pythonforthelab.com/blog/starting-and-synchronizing-threads/
+* https://www.pythonforthelab.com/blog/handling-and-sharing-data-between-threads/
+
+#### pandas
+* https://www.geeksforgeeks.org/selecting-rows-in-pandas-dataframe-based-on-conditions/
+
+
+### Docker
+
+* https://runnable.com/blog/9-common-dockerfile-mistakes

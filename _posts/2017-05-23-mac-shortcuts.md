@@ -19,3 +19,4 @@ tags:
 |Capture Entire screen|Shift-Command (⌘)-3|
 |Capture Selected screen|Shift-Command (⌘)-4|
 |Capture a window|Shift-Command (⌘)-4 then Press Spacebar|
+|
