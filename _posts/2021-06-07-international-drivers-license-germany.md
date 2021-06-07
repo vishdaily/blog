@@ -1,5 +1,5 @@
 ---
-title: Applying for an internation drivers license in Germany
+title: Applying for an international drivers license in Germany
 layout: post
 tags:
   - germany
