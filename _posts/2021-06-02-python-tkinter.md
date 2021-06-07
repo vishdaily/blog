@@ -1,5 +1,5 @@
 ---
-title: Python Tkinter
+title: Python GUI with Tkinter
 layout: post
 tags:
   - python
