@@ -20,7 +20,7 @@ Last time when I applied, it was costing me 16 EUR
 
 ## Is this international license valid in all countries. 
 
-According to https://www.bmvi.de/SharedDocs/DE/Artikel/StV/Strassenverkehr/gueltigkeit-deutscher-fahrerlaubnisse-fuehrerscheine-im-ausland.html
+According to (https://www.bmvi.de/SharedDocs/DE/Artikel/StV/Strassenverkehr/gueltigkeit-deutscher-fahrerlaubnisse-fuehrerscheine-im-ausland.html)
 it is difficult to say. But it should be valid in many countries together with German drivers license. 
 
 This adac page gives some clues https://www.adac.de/verkehr/rund-um-den-fuehrerschein/fahren-ausland/internationaler-fuehrerschein/ but only covers few countries. For example, It doesn't have information if it is valid in India, the country for which I am search for now. https://www.auswaertiges-amt.de has more concentrated information.
