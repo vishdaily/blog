@@ -60,3 +60,12 @@ Then renew the certificates
 certbot certonly -d maindomain.com
 certbot certonly -d sub1.maindomain.com
 ```
+
+# letsencrypt on ubuntu 20
+
+```bash
+apt install letsencrypt
+systemctl status certbot.timer
+# ensure that no port is running on 80
+certbot certonly --standalone --agree-tos --preferred-challenges http -d domain-name.com
+```

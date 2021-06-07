@@ -1,8 +1,9 @@
 ---
-title: All about GPG keys
+title: Python Tkinter
 layout: post
 tags:
   - python
+  - python-gui
   - tkinter
 ---
 

@@ -55,6 +55,9 @@ convert ID_Photo_5.1x5.1cm_2812021_212605.jpg.jpg -resize 500 -quality 50 output
 # Reduce dpi or ppi 
 convert -units PixelsPerInch output.jpg -density 250 output1.jpg
 
+# convert heic to jpeg
+magick convert example_image.HEIC example_image.jpg
+
 ```
 
 ### crontab
@@ -114,53 +117,6 @@ echo $HISTFILESIZE
 # display current shell
 echo $SHELL
 echo $0
-```
-
-### ffmpeg
-
-```bash
-# Change resolution of video file
-ffmpeg -i input.mp4 -filter:v scale=1280:720 -c:a copy output.mp4 OR
-ffmpeg -i input.mp4 -s 1280x720 -c:a copy output.mp4
-ffmpeg -i input.mp4 -filter:v scale=640:480 -c:a copy output.mp4 OR
-ffmpeg -i input.mp4 -s 640x480 -c:a copy output.mp4
-ffmpeg -i test.mp4 -filter:v scale=640x480 -c:a copy test1.mp4
-# Convert video to audio
-ffmpeg -i input.mp4 -vn -ab 320 output.mp3
-ffmpeg -i input.webm -qscale 0 output.mp4
-# compress video file
-ffmpeg -i input.mp4 -vf scale=1280:-1 -c:v libx264 -preset veryslow -crf 24 output.mp4
-
-Please note that you will lose the quality if you try to reduce the video file size. You can lower that crf value to 23 or lower if 24 is too aggressive.
-You could also transcode the audio down a bit and make it stereo to reduce the size by including the following options.
-
--ac 2 -c:a aac -strict -2 -b:a 128k
-# Removing audio stream from a media file
-ffmpeg -i input.mp4 -an output.mp4
-# Extracting images from the video
-ffmpeg -i input.mp4 -r 1 -f image2 image-%2d.png
-# convert the first 50 seconds of given video.mp4 file to video.avi format
-ffmpeg -i input.mp4  -t 50 output.avi 
-# Set the aspect ratio to video
-ffmpeg -i input.mp4 -aspect 16:9 output.mp4
-# Trim a media file using start and stop times
-ffmpeg -i audio.mp3 -ss 00:01:54 -to 00:06:53 -c copy output.mp3
-ffmpeg -i input.mp4 -ss 00:00:50 -codec copy -t 50 output.mp4
-ffmpeg -i st.mp4 -s 00:00:00 -to 00:58:40 -codec copy st_output.mp4
-# to cut media from middle to somewhere -to isn't working but -t is..
-ffmpeg -i "input.mp4" -ss 37:00 -t 01:16:00 -codec copy "output.mp4"
-# join files
-ffmpeg -f concat -i join.txt -c copy output.mp4
-fmpeg -i input.mp4 -i subtitle.srt -map 0 -map 1 -c copy -c:v libx264 -crf 23 -preset veryfast output.mp4
-# map audio coming from left to both left and right
-ffmpeg -i "input.mp4" -map_channel 0.1.0 -maap_channel 0.1.0 output.mp4
-# convert part of video to different output
-ffmpeg -i input.mp4  -t 50 output.avi
-
-https://unix.stackexchange.com/questions/28803/how-can-i-reduce-a-videos-size-with-ffmpeg
-
-ffmpeg -i $infile -vf "scale=iw/2:ih/2" $outfile 
-```bash
 ```
 
 ### find

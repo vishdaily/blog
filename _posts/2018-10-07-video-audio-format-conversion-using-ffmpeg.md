@@ -11,6 +11,20 @@ categories:
 tags:
   - audio-video
 ---
+
+Recommended resolution & aspect ratios
+For the default 16:9 aspect ratio, encode at these resolutions:
+
+```bash
+2160p: 3840x2160
+1440p: 2560x1440
+1080p: 1920x1080
+720p: 1280x720
+480p: 854x480
+360p: 640x360
+240p: 426x240
+```
+
 ```bash
 # get file info
 ffmpeg -i input.mp4
@@ -72,4 +86,118 @@ ffmpeg -f image2 -i input%d.jpg output.mpg
 ffmpeg -i input.mpg output%d.jpg
 
 
+# Change resolution of video file
+ffmpeg -i input.mp4 -filter:v scale=1280:720 -c:a copy output.mp4 OR
+ffmpeg -i input.mp4 -s 1280x720 -c:a copy output.mp4
+ffmpeg -i input.mp4 -filter:v scale=640:480 -c:a copy output.mp4 OR
+ffmpeg -i input.mp4 -s 640x480 -c:a copy output.mp4
+ffmpeg -i test.mp4 -filter:v scale=640x480 -c:a copy test1.mp4
+# Convert video to audio
+ffmpeg -i input.mp4 -vn -ab 320 output.mp3
+ffmpeg -i input.webm -qscale 0 output.mp4
+# compress video file
+ffmpeg -i input.mp4 -vf scale=1280:-1 -c:v libx264 -preset veryslow -crf 24 output.mp4
+
+Please note that you will lose the quality if you try to reduce the video file size. You can lower that crf value to 23 or lower if 24 is too aggressive.
+You could also transcode the audio down a bit and make it stereo to reduce the size by including the following options.
+
+-ac 2 -c:a aac -strict -2 -b:a 128k
+# Removing audio stream from a media file
+ffmpeg -i input.mp4 -an output.mp4
+# Extracting images from the video
+ffmpeg -i input.mp4 -r 1 -f image2 image-%2d.png
+# convert the first 50 seconds of given video.mp4 file to video.avi format
+ffmpeg -i input.mp4  -t 50 output.avi 
+# Set the aspect ratio to video
+ffmpeg -i input.mp4 -aspect 16:9 output.mp4
+# Trim a media file using start and stop times
+ffmpeg -i audio.mp3 -ss 00:01:54 -to 00:06:53 -c copy output.mp3
+ffmpeg -i input.mp4 -ss 00:00:50 -codec copy -t 50 output.mp4
+ffmpeg -i st.mp4 -s 00:00:00 -to 00:58:40 -codec copy st_output.mp4
+# to cut media from middle to somewhere -to isn't working but -t is..
+ffmpeg -i "input.mp4" -ss 37:00 -t 01:16:00 -codec copy "output.mp4"
+# join files
+ffmpeg -f concat -i join.txt -c copy output.mp4
+fmpeg -i input.mp4 -i subtitle.srt -map 0 -map 1 -c copy -c:v libx264 -crf 23 -preset veryfast output.mp4
+# map audio coming from left to both left and right
+ffmpeg -i "input.mp4" -map_channel 0.1.0 -maap_channel 0.1.0 output.mp4
+# convert part of video to different output
+ffmpeg -i input.mp4  -t 50 output.avi
+
+https://unix.stackexchange.com/questions/28803/how-can-i-reduce-a-videos-size-with-ffmpeg
+
+ffmpeg -i $infile -vf "scale=iw/2:ih/2" $outfile 
+
+# The command to just stream it to a new container (mp4) needed by some applications like Adobe Premiere Pro without encoding (fast) is:
+ffmpeg -i input.mov -qscale 0 output.mp4
+
+# Alternative as mentioned in the comments, which re-encodes with best quaility (-qscale 0):
+ffmpeg -i input.mov -q:v 0 output.mp4
+
+# Reduce size by reducing size of the video
+ffmpeg -i IMG_0709.MOV -filter:v scale=720:-1 -c:a copy IMG_0709.mp4
+
+# Sometimes i had problems with the above command  where it was complaining about 
+# maybe incorrect parameters such as bit_rate, rate, width or height
+# as the recording (since they were recorced as screen recording) width and hight were wierd width=750, height=1334 
+ffmpeg -i RPReplay_Final1610878476_compress.MP4 -vf scale=-1:1280 -acodec copy -threads 12 output/RPReplay_Final1610878476_compress.MP4
+```
+
+
+## script to reduce file size of the video files given the path and the regex
+
+
+```bash
+#!/bin/bash
+# ./reduce_video_size.sh ~/Pictures/personal_photos_processing/vedith/ "*.mov" ~/Pictures/personal_photos_processing/vedith/output/ 1280 720 mp4
+
+SOURCE_DIR="$1"
+NAME_FILTER="$2"
+OUTPUT_DIR="$3"
+TARGET_WIDTH="$4"
+TARGET_HEIGHT="$5"
+OUTPUT_FILE_FORMAT="$6"
+
+if [ $# -ne 6 ]; then
+echo "number of params passed $#"
+echo "pass all required params"
+echo "$0 SOURCE_DIR NAME_FILTER(*.mp4) OUTPUT_DIR TARGET_WIDTH(1280) TARGET_HEIGHT(720) OUTPUT_FILE_FORMAT(mp4)"
+exit 1
+fi
+
+if [ ! -d "$SOURCE_DIR" ]; then
+	echo "source_dir $SOURCE_DIR doesnt exist"
+	exit 1
+fi
+
+find "$SOURCE_DIR" -iname "$NAME_FILTER" -print | while read -r line; do
+echo "processing"
+du -h "$line"
+W=$( ffprobe "$line" -show_streams 2>1 | grep -E '^width=' )
+W=${W#width=}
+
+H=$( ffprobe "$line" -show_streams 2>1 | grep -E '^height=' )
+H=${H#height=}
+echo "width=$H - height=$W"
+DURATION=$( ffprobe "$line" -show_streams 2>1 | grep -E '^duration=' | head -n 1  )
+DURATION=${DURATION#duration=}
+echo "duration = $DURATION seconds which is around $(echo "($DURATION/60)" | bc) minute(s)"
+
+# Target a 1920x1080 output video.
+TARGETW=1280
+TARGETH=720
+
+if [ $(( $W * $TARGETH )) -gt $(( $H * $TARGETW )) ]; then
+    # The width is larger, use that
+    SCALEPARAM="scale=-1:$TARGETW"
+else
+    # The height is larger, use that
+    SCALEPARAM="scale=$TARGETH:-1"
+fi
+
+OUTPUT_FILE_NAME="$(basename "$line")"
+OUTPUT_PATH="${OUTPUT_DIR}/${OUTPUT_FILE_NAME}.${OUTPUT_FILE_FORMAT}"
+echo ffmpeg -i $line -vf $SCALEPARAM $OUTPUT_PATH
+
+done
 ```
