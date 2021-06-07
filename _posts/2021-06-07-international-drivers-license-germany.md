@@ -14,6 +14,10 @@ One can get an international drivers license in Germany provided, they already h
 * Biometric photo
 * EU driving license card
 
+## Costs
+
+Last time when I applied, it was costing me 16 EUR
+
 ## Is this international license valid in all countries. 
 
 According to https://www.bmvi.de/SharedDocs/DE/Artikel/StV/Strassenverkehr/gueltigkeit-deutscher-fahrerlaubnisse-fuehrerscheine-im-ausland.html
