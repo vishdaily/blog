@@ -475,6 +475,7 @@ rsync --dry-run --delete --exclude=*skip_backup/ -aAXzv /drives/c/dev/ /drives/u
 rsync -avzn --delete -exclude '.svn*' /tmp/sizzleup/ ~/Documents/workspaces/workspace-sts-3.8.1.RELEASE/project1/
 
 rsync -avz --delete -exclude '.svn*' /tmp/sizzleup/ ~/Documents/workspaces/workspace-sts-3.8.1.RELEASE/project1/
+rsync -avz --delete --no-perms --no-owner --no-group  --size-only --checksum --exclude '.DS_Store' --progress "/Users/vish/Nextcloud2/Documents/mydocs/" "/Volumes/NO NAME/mydocs/"
 ```
 
 ### screen
