@@ -63,7 +63,19 @@ add the following line in bashrc
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
 ```
 [https://github.com/pyenv/pyenv-virtualenv]
+
 Alternatively check https://realpython.com/intro-to-pyenv/ for installation
+
+### Common build errors
+
+https://stackoverflow.com/questions/52873193/error-the-python-ssl-extension-was-not-compiled-missing-the-openssl-lib-inst
+
+```bash
+On Debian stretch (and Ubuntu bionic), libssl-dev is OpenSSL 1.1.x, but support for that was only added in Python 2.7.13, 3.5.3 and 3.6.0. To install earlier versions, you need to replace libssl-dev with libssl1.0-dev. This is being tracked in https://github.com/pyenv/pyenv/issues/945.
+
+So if you don't need a specific version of 2.7 you can go ahead and install 2.7.13 and the error will not appear
+```
+
 ## FAQ Commands
 ```bash
 pyenv install --list | grep " 3\.[678]"
@@ -112,10 +124,10 @@ cat << EOF >> /root/docker_data/scripts/nsedatadownloader/runpy
 #!/bin/bash    
 source /root/.pyenv/versions/3.5.4/envs/3_5_4/bin/activate
 
-# virtualenv is now active, which means your PATH has been modified.
-# Don't try to run python from /usr/bin/python, just run "python" and
-# let the PATH figure out which version to run (based on what your
-# virtualenv has configured).
+#virtualenv is now active, which means your PATH has been modified.
+#Don't try to run python from /usr/bin/python, just run "python" and
+#let the PATH figure out which version to run (based on what your
+#virtualenv has configured).
 
 python "$@"
 
