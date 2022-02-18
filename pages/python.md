@@ -71,7 +71,9 @@ Alternatively check https://realpython.com/intro-to-pyenv/ for installation
 https://stackoverflow.com/questions/52873193/error-the-python-ssl-extension-was-not-compiled-missing-the-openssl-lib-inst
 
 ```bash
-On Debian stretch (and Ubuntu bionic), libssl-dev is OpenSSL 1.1.x, but support for that was only added in Python 2.7.13, 3.5.3 and 3.6.0. To install earlier versions, you need to replace libssl-dev with libssl1.0-dev. This is being tracked in https://github.com/pyenv/pyenv/issues/945.
+On Debian stretch (and Ubuntu bionic), libssl-dev is OpenSSL 1.1.x, 
+but support for that was only added in Python 2.7.13, 3.5.3 and 3.6.0. To install earlier versions, 
+you need to replace libssl-dev with libssl1.0-dev. This is being tracked in https://github.com/pyenv/pyenv/issues/945.
 
 So if you don't need a specific version of 2.7 you can go ahead and install 2.7.13 and the error will not appear
 ```
